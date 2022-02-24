@@ -7,7 +7,7 @@ Terraform module to manage a [proximity placement group](https://registry.terraf
 An sample example :
 
 ```hcl
-module "ppg" {}
+module "ppg" {
   source = "github.com/Xat59/terraform-azurerm-terraform-azurerm-proximity_placement_group"
 
   name                = "ppg0netyyy000"
