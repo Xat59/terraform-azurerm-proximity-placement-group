@@ -8,7 +8,7 @@ An sample example :
 
 ```hcl
 module "ppg" {}
-  source = "github.com/scalair/terraform-azurerm-dns"
+  source = "github.com/Xat59/terraform-azurerm-terraform-azurerm-proximity_placement_group"
 
   name                = "ppg0netyyy000"
   location            = "westeurope"
