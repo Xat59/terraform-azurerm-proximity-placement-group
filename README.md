@@ -1,4 +1,4 @@
-# terraform-azurerm-proximity_placement_group
+# terraform-azurerm-proximity-placement-group
 
 Terraform module to manage a [proximity placement group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/proximity_placement_group) for virtual machines, virtual machine scale sets and availability sets.
 
@@ -8,7 +8,7 @@ An sample example :
 
 ```hcl
 module "ppg" {
-  source = "github.com/Xat59/terraform-azurerm-terraform-azurerm-proximity_placement_group"
+  source = "github.com/Xat59/terraform-azurerm-proximity-placement-group"
 
   name                = "ppg0netyyy000"
   location            = "westeurope"
