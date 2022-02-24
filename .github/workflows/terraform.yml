@@ -3,16 +3,26 @@ name: 'terraform'
 
 on:
   push:
+    branches-ignore:
+      - master
+      - main
+    branches:
+      - 'releases/**'
   pull_request:
-
+    branches: [master, main] 
 
 jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
       - name: Linter
         uses: github/super-linter@v4.9.0
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
           default-branch: main
 ...
