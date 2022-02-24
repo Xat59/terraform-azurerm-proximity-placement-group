@@ -1,0 +1,26 @@
+---
+name: 'terraform'
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed file 
+          # within `super-linter`
+          fetch-depth: 0
+
+      - name: Linter
+        uses: github/super-linter@v4.9.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+...
