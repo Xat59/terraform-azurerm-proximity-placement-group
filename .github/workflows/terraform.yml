@@ -21,4 +21,6 @@ jobs:
 
       - name: Linter
         uses: github/super-linter@v4.9.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ...
